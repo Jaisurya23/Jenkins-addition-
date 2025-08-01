@@ -20,13 +20,13 @@ pipeline {
             }
         }
     }
-    post {
-        always {
-            // Publish JUnit test results
-            junit 'test-reports/*.xml'
+    stage('Publish Test Report') {
+            steps {
+                junit 'test-reports/**/*.xml'
+            }
         }
-    }
 }
+
 
 
  
