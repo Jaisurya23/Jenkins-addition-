@@ -4,23 +4,24 @@ pipeline {
     stages {
         stage('Check Python Version') {
             steps {
-                bat 'python --version'
+                bat '"C:\\Users\\welcome\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" --version'
             }
         }
 
         stage('Run Addition Script') {
             steps {
-                bat 'python add.py'
+                bat '"C:\\Users\\welcome\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" addition.py'
             }
         }
 
         stage('Run Unit Tests') {
             steps {
-                bat 'python test_add.py'
+                bat '"C:\\Users\\welcome\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" test_addition.py'
             }
         }
     }
 }
+
 
     post {
         always {
