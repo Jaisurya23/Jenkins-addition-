@@ -16,17 +16,20 @@ pipeline {
 
         stage('Run Unit Tests') {
             steps {
-                bat '"C:\\Users\\welcome\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" test_add.py'
+                bat '"C:\\Users\\welcome\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" -m xmlrunner discover -s tests -o test-reports'
             }
         }
-    }
-    stage('Publish Test Report') {
+
+        stage('Publish Test Report') {
             steps {
                 junit 'test-reports/**/*.xml'
             }
         }
+    }
+
+    post {
+        always {
+            echo 'Pipeline Finished'
+        }
+    }
 }
-
-
-
- 
