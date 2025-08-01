@@ -10,13 +10,13 @@ pipeline {
 
         stage('Run Addition Script') {
             steps {
-                bat '"C:\\Users\\welcome\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" addition.py'
+                bat '"C:\\Users\\welcome\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" add.py'
             }
         }
 
         stage('Run Unit Tests') {
             steps {
-                bat '"C:\\Users\\welcome\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" test_addition.py'
+                bat '"C:\\Users\\welcome\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" test_add.py'
             }
         }
     }
