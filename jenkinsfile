@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Check Python Version') {
+            steps {
+                bat 'python --version'
+            }
+        }
+
+        stage('Run Addition Script') {
+            steps {
+                bat 'python add.py'
+            }
+        }
+
+        stage('Run Unit Tests') {
+            steps {
+                bat 'python test_add.py'
+            }
+        }
+    }
+}
