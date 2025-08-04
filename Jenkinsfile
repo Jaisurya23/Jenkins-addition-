@@ -27,9 +27,26 @@ pipeline {
         }
     }
 
-    post {
+        post {
         always {
-            echo 'Pipeline Finished'
+            emailext(
+                subject: "Build ${env.JOB_NAME} #${env.BUILD_NUMBER} - ${currentBuild.currentResult}",
+                body: """
+                Hi Team,
+
+                Job Name: ${env.JOB_NAME}
+                Build Number: ${env.BUILD_NUMBER}
+                Status: ${currentBuild.currentResult}
+                URL: ${env.BUILD_URL}
+
+                Regards,
+                Jenkins
+                """,
+                from: 'jaisuryafirerockers@gmail.com',
+                to: 'jaisuryafirerockers@gmail.com'
+            )
+            echo 'Email notification sent.'
+            echo 'Successfully completed the pipeline.'
         }
     }
 }
