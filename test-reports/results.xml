@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-	<testsuite name="TestAdd-20250801182852" tests="3" file=".py" time="0.002" timestamp="2025-08-01T18:28:52" failures="0" errors="0" skipped="0">
-		<testcase classname="TestAdd" name="test_addition" time="0.001" timestamp="2025-08-01T18:28:52" file="test_add.py" line="6"/>
-		<testcase classname="TestAdd" name="test_negative_numbers" time="0.001" timestamp="2025-08-01T18:28:52" file="test_add.py" line="9"/>
-		<testcase classname="TestAdd" name="test_zero" time="0.000" timestamp="2025-08-01T18:28:52" file="test_add.py" line="12"/>
+	<testsuite name="TestAdd-20250801184910" tests="3" file=".py" time="0.002" timestamp="2025-08-01T18:49:10" failures="0" errors="0" skipped="0">
+		<testcase classname="TestAdd" name="test_addition" time="0.001" timestamp="2025-08-01T18:49:10" file="test_add.py" line="6"/>
+		<testcase classname="TestAdd" name="test_negative_numbers" time="0.001" timestamp="2025-08-01T18:49:10" file="test_add.py" line="9"/>
+		<testcase classname="TestAdd" name="test_zero" time="0.000" timestamp="2025-08-01T18:49:10" file="test_add.py" line="12"/>
 	</testsuite>
 </testsuites>
